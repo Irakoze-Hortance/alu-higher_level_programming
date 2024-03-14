@@ -72,3 +72,4 @@ class Rectangle:
         to be able to recreate a new instance
         """
         return "Rectangle({}, {})".format(self.__width, self.__height)
+    

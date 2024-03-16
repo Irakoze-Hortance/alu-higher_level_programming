@@ -1,5 +1,9 @@
 #!/usr/bin/python3
-""" Load, add, save  """
+"""Module documentation.
+
+This module contains a function that creates an object from a JSON file.
+"""
+
 from sys import argv
 from typing import List
 from os.path import exists

@@ -25,5 +25,5 @@ def add_arguments_to_list(arguments: List[str]) -> None:
     except Exception as e:
         print(f"An error occurred: {e}")
 
-if _name_ == "_main_":
+if __name__ == "_main_":
     add_arguments_to_list(argv[1:])

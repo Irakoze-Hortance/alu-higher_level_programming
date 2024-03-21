@@ -27,3 +27,4 @@ def add_arguments_to_list(arguments: List[str]) -> None:
 
 if __name__ == "_main_":
     add_arguments_to_list(argv[1:])
+

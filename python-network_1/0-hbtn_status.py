@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-"""Prints status of site"""
 import urllib.request
 
 url = 'https://intranet.hbtn.io/status'

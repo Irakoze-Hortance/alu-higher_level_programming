@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Documented by Lsblack"""
+"""Prints status of site"""
 import urllib.request
 
 url = 'https://intranet.hbtn.io/status'

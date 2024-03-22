@@ -1,17 +1,39 @@
 class Vehicle:
-    def __init__(self, make, model, year):
-        self.make = make
-        self.model = model
-        self.year = year
+    def __init__(self, name, speed):
+        self.name = name
+        self.speed = speed
 
-class CustomCar(Vehicle):
-    def __init__(self, make, model, year,number_of_tires):
-        super().__init__(make, model, year)
-        self.number_of_tires = number_of_tires
+    def get_speed(self):
+        print("The speed of "+ self.name + " is " + str(self.speed) + " km/h")     
+
+class Car(Vehicle):
+    def __init__(self, name, speed,mileage):
+        super().__init__(name, speed)
+        self.mileage = mileage
+    
+    def get_speed(self):
+        print("The speed of "+ self.name + " is " + str(self.speed) + " km/h")
+
+class Boat(Vehicle):
+    def sail(self):
+        print(self.name + " is sailing")
+
+vehicle=Vehicle("Bike",45)
+car=Car("Toyota",120,18)
+boat=Boat("Titanic",30)
+car.get_speed()
 
 
-toyota = Vehicle('Toyota', 'Corolla', 2019)
-rukururana = CustomCar({'Toyota', 'Mercedes'},{ 'Carina', 'Benz'}, {2019, 2021}, {4, 8})
-print(rukururana.make, rukururana.model) 
+class Dog:
+    def walk(self):
+        print("*walking*")
+    def speak(self):
+        print("Woof!")
 
+class JackRussellTerrier(Dog):
+    def speak(self):
+        return "Arff"
+    
+bobo=JackRussellTerrier()
+bobo.walk()
 

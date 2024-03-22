@@ -1,17 +1,11 @@
 #!/usr/bin/python3
-"""take a url and display the values"""
+"""A script that sends POST requests and displays the response"""
 
 
-import requests
-import sys
+if __name__ == '__main__':
+    import requests
+    import sys
 
-
-if __name__ == "__main__":
-    """send the email"""
-    url = sys.argv[1]
-    email = sys.argv[2]
-    context = {
-        "email": email
-    }
-    response = requests.post(url, data=context)
-    print("{}".format(response.text))
+    xyz = {'email': sys.argv[2]}
+    request = requests.post(sys.argv[1], data=xyz)
+    print("{}".format(request.text))

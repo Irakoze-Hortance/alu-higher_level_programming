@@ -1,16 +1,12 @@
 #!/usr/bin/python3
-"""take a url and display the values"""
+"""A script that sends a requests and displays the body of response."""
 
 
-import requests
-import sys
-
-
-if __name__ == "__main__":
-    """send the email"""
-    url = sys.argv[1]
-    response = requests.get(url)
-    if response.status_code <= 400:
-        print("{}".format(response.text))
-    else:
-        print("Error code: {}".format(response.status_code))
+if __name__ == '__main__':
+    import requests
+    import sys
+    request = requests.get(sys.argv[1])
+    if request.status_code < 400:
+        print(request.text)
+    elif request.status_code >= 400:
+        print("Error code: {}".format(request.status_code))

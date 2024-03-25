@@ -1,18 +1,13 @@
 #!/usr/bin/python3
-"""append_after"""
+"""inserts a text to a file, after each line containing a search string"""
 
 
 def append_after(filename="", search_string="", new_string=""):
-    """append_after"""
+    """Inserts a line of text to a file based on some conditions"""
+    with open(filename, 'r', encoding='UTF-8') as file:
+        lns = file.readlines()
 
-    with open(filename, mode="r+", encoding="utf-8") as readFile:
-        data = readFile.readlines()
+    new_lns = [ln + new_string if search_string in ln else ln for ln in lns]
 
-    count = 0
-    with open(filename, mode="w", encoding="utf-8") as writeFile:
-        for lines in data:
-            count += 1
-            if search_string in lines:
-                data.insert(count, new_string)
-        for lines in data:
-            writeFile.write(lines)
+    with open(filename, 'w', encoding='UTF-8') as file:
+        file.writelines(new_lns)

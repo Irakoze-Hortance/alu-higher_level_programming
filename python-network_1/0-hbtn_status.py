@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import urllib.request
+""" Fetches form url"""
 
 url = 'https://alu-intranet.hbtn.io/status'
 headers = {

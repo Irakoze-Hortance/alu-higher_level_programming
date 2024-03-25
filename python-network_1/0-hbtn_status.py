@@ -9,10 +9,14 @@ headers = {
     '\n    Chrome/99.0.4844.84 Safari/537.36',
 }
 
+
 req = urllib.request.Request(url, headers=headers)
-with urllib.request.urlopen(req) as response:
-    content = response.read()
-    print("Body response:")
-    print("\t- type: {}".format(type(content)))
-    print("\t- content: {}".format(content))
-    print("\t- utf8 content: {}".format(content.decode("utf-8")))
+try:
+    with urllib.request.urlopen(req) as response:
+        content = response.read()
+        print("Body response:")
+        print("\t- type: {}".format(type(content)))
+        print("\t- content: {}".format(content))
+        print("\t- utf8 content: {}".format(content.decode("utf-8")))
+except urllib.error.HTTPError as e:
+    print(f"Error: {e.code} - {e.reason}")

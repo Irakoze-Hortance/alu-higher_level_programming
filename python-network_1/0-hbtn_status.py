@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import urllib.request
-""" Fetches from https://alu-intranet.hbtn.io/status"""
+""" Fetches from https://intranet.hbtn.io/status"""
 
 url = 'https://intranet.hbtn.io/status'
 headers = {
